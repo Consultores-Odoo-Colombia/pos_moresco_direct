@@ -1,0 +1,324 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* pos_moresco_direct
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 18.0\n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: pos_moresco_direct
+#: model:ir.model.fields,field_description:pos_moresco_direct.field_pos_config__moresco_auto_read
+msgid "Auto Read Weight"
+msgstr ""
+
+#. module: pos_moresco_direct
+#: model_terms:ir.ui.view,arch_db:pos_moresco_direct.view_pos_config_form_moresco
+#: model_terms:ir.ui.view,arch_db:pos_moresco_direct.res_config_settings_view_form_moresco
+msgid "Auto Read"
+msgstr ""
+
+#. module: pos_moresco_direct
+#: model:ir.model.fields,field_description:pos_moresco_direct.field_pos_config__moresco_baud_rate
+#: model_terms:ir.ui.view,arch_db:pos_moresco_direct.view_pos_config_form_moresco
+msgid "Baud Rate"
+msgstr ""
+
+#. module: pos_moresco_direct
+#. odoo-javascript
+#: code:addons/pos_moresco_direct/static/src/js/moresco_navbar_weight.js:0
+msgid "Báscula conectada — clic para desconectar"
+msgstr ""
+
+#. module: pos_moresco_direct
+#. odoo-javascript
+#: code:addons/pos_moresco_direct/static/src/js/moresco_navbar_weight.js:0
+msgid "Clic o Ctrl+B para conectar báscula · Alt+B para buscar producto"
+msgstr ""
+
+#. module: pos_moresco_direct
+#: model:ir.model,name:pos_moresco_direct.model_pos_config
+msgid "Point of Sale Configuration"
+msgstr ""
+
+#. module: pos_moresco_direct
+#. odoo-javascript
+#: code:addons/pos_moresco_direct/static/src/xml/pos_screen.xml:0
+msgid "Connect Scale"
+msgstr ""
+
+#. module: pos_moresco_direct
+#: model:ir.model.fields,field_description:pos_moresco_direct.field_pos_config__moresco_data_bits
+#: model_terms:ir.ui.view,arch_db:pos_moresco_direct.view_pos_config_form_moresco
+msgid "Data Bits"
+msgstr ""
+
+#. module: pos_moresco_direct
+#: model:ir.model.fields,field_description:pos_moresco_direct.field_pos_config__moresco_scale_enabled
+msgid "Enable Moresco Scale"
+msgstr ""
+
+#. module: pos_moresco_direct
+#: model:ir.model.fields,help:pos_moresco_direct.field_pos_config__moresco_scale_enabled
+msgid ""
+"Enable the Moresco HY-918 scale via Web Serial API (USB-RS232 adapter, "
+"Chrome/Edge). No IoT Box required."
+msgstr ""
+
+#. module: pos_moresco_direct
+#. odoo-javascript
+#: code:addons/pos_moresco_direct/static/src/js/moresco_navbar_weight.js:0
+msgid "Error"
+msgstr ""
+
+#. module: pos_moresco_direct
+#. odoo-javascript
+#: code:addons/pos_moresco_direct/static/src/js/moresco_scale.js:0
+msgid "Este método de pago ya está agregado."
+msgstr ""
+
+#. module: pos_moresco_direct
+#. odoo-javascript
+#: code:addons/pos_moresco_direct/static/src/js/moresco_scale.js:0
+msgid "Failed to connect scale: "
+msgstr ""
+
+#. module: pos_moresco_direct
+#: model:ir.model.fields.selection,name:pos_moresco_direct.selection__pos_config__moresco_simulation_mode__fixed
+msgid "Fixed Weight"
+msgstr ""
+
+#. module: pos_moresco_direct
+#: model:ir.model.fields,field_description:pos_moresco_direct.field_pos_config__moresco_simulation_fixed_weight
+#: model_terms:ir.ui.view,arch_db:pos_moresco_direct.view_pos_config_form_moresco
+#: model_terms:ir.ui.view,arch_db:pos_moresco_direct.res_config_settings_view_form_moresco
+msgid "Fixed Weight (kg)"
+msgstr ""
+
+#. module: pos_moresco_direct
+#: model:ir.model.fields,field_description:pos_moresco_direct.field_pos_config__moresco_simulation_max_weight
+#: model_terms:ir.ui.view,arch_db:pos_moresco_direct.view_pos_config_form_moresco
+#: model_terms:ir.ui.view,arch_db:pos_moresco_direct.res_config_settings_view_form_moresco
+msgid "Max Weight (kg)"
+msgstr ""
+
+#. module: pos_moresco_direct
+#: model:ir.model.fields,field_description:pos_moresco_direct.field_pos_config__moresco_simulation_min_weight
+#: model_terms:ir.ui.view,arch_db:pos_moresco_direct.view_pos_config_form_moresco
+#: model_terms:ir.ui.view,arch_db:pos_moresco_direct.res_config_settings_view_form_moresco
+msgid "Min Weight (kg)"
+msgstr ""
+
+#. module: pos_moresco_direct
+#: model_terms:ir.ui.view,arch_db:pos_moresco_direct.view_pos_config_form_moresco
+#: model_terms:ir.ui.view,arch_db:pos_moresco_direct.res_config_settings_view_form_moresco
+msgid "Moresco HY-918 (USB-RS232)"
+msgstr ""
+
+#. module: pos_moresco_direct
+#. odoo-javascript
+#: code:addons/pos_moresco_direct/static/src/js/moresco_scale.js:0
+msgid "Moresco scale connected ✓"
+msgstr ""
+
+#. module: pos_moresco_direct
+#. odoo-javascript
+#: code:addons/pos_moresco_direct/static/src/js/moresco_scale.js:0
+msgid ""
+"Moresco scale is not enabled. Enable it in POS Configuration → Connected "
+"Devices."
+msgstr ""
+
+#. module: pos_moresco_direct
+#. odoo-javascript
+#: code:addons/pos_moresco_direct/static/src/js/moresco_scale.js:0
+msgid "No active order"
+msgstr ""
+
+#. module: pos_moresco_direct
+#. odoo-javascript
+#: code:addons/pos_moresco_direct/static/src/js/moresco_keyboard_navigation.js:0
+msgid "No existe una referencia interna exacta para: "
+msgstr ""
+
+#. module: pos_moresco_direct
+#. odoo-javascript
+#: code:addons/pos_moresco_direct/static/src/js/moresco_keyboard_navigation.js:0
+msgid "No hay productos en la orden"
+msgstr ""
+
+#. module: pos_moresco_direct
+#. odoo-javascript
+#: code:addons/pos_moresco_direct/static/src/js/moresco_keyboard_navigation.js:0
+msgid "No hay productos para: "
+msgstr ""
+
+#. module: pos_moresco_direct
+#. odoo-javascript
+#: code:addons/pos_moresco_direct/static/src/js/moresco_scale.js:0
+msgid "No product selected. Please select a product first."
+msgstr ""
+
+#. module: pos_moresco_direct
+#. odoo-javascript
+#: code:addons/pos_moresco_direct/static/src/js/moresco_scale.js:0
+msgid "No weight reading yet. Place product on scale and try again."
+msgstr ""
+
+#. module: pos_moresco_direct
+#: model:ir.model.fields.selection,name:pos_moresco_direct.selection__pos_config__moresco_parity__even
+msgid "Even"
+msgstr ""
+
+#. module: pos_moresco_direct
+#: model:ir.model.fields.selection,name:pos_moresco_direct.selection__pos_config__moresco_parity__none
+msgid "None"
+msgstr ""
+
+#. module: pos_moresco_direct
+#: model:ir.model.fields.selection,name:pos_moresco_direct.selection__pos_config__moresco_parity__odd
+msgid "Odd"
+msgstr ""
+
+#. module: pos_moresco_direct
+#: model:ir.model.fields,field_description:pos_moresco_direct.field_pos_config__moresco_parity
+#: model_terms:ir.ui.view,arch_db:pos_moresco_direct.view_pos_config_form_moresco
+msgid "Parity"
+msgstr ""
+
+#. module: pos_moresco_direct
+#: model:ir.model.fields.selection,name:pos_moresco_direct.selection__pos_config__moresco_simulation_mode__random
+msgid "Random Range"
+msgstr ""
+
+#. module: pos_moresco_direct
+#. odoo-javascript
+#: code:addons/pos_moresco_direct/static/src/xml/pos_screen.xml:0
+msgid "Read weight from Moresco scale"
+msgstr ""
+
+#. module: pos_moresco_direct
+#: model_terms:ir.ui.view,arch_db:pos_moresco_direct.view_pos_config_form_moresco
+#: model_terms:ir.ui.view,arch_db:pos_moresco_direct.res_config_settings_view_form_moresco
+msgid ""
+"Read weight directly from the browser via Web Serial API (Chrome/Edge). No "
+"IoT Box required."
+msgstr ""
+
+#. module: pos_moresco_direct
+#. odoo-javascript
+#: code:addons/pos_moresco_direct/static/src/xml/pos_screen.xml:0
+msgid "Scale ✓"
+msgstr ""
+
+#. module: pos_moresco_direct
+#. odoo-javascript
+#: code:addons/pos_moresco_direct/static/src/js/moresco_scale.js:0
+msgid "Scale not connected. Click 'Connect Scale' button to connect."
+msgstr ""
+
+#. module: pos_moresco_direct
+#. odoo-javascript
+#: code:addons/pos_moresco_direct/static/src/js/moresco_scale.js:0
+msgid "Selected product is not weighable. Enable 'To Weigh' on the product."
+msgstr ""
+
+#. module: pos_moresco_direct
+#: model:ir.model.fields,help:pos_moresco_direct.field_pos_config__moresco_baud_rate
+msgid "Serial port baud rate (default: 9600 for Moresco HY918)"
+msgstr ""
+
+#. module: pos_moresco_direct
+#: model:ir.model.fields,help:pos_moresco_direct.field_pos_config__moresco_data_bits
+msgid "Serial port data bits (default: 8)"
+msgstr ""
+
+#. module: pos_moresco_direct
+#: model:ir.model.fields,help:pos_moresco_direct.field_pos_config__moresco_parity
+msgid "Serial port parity (default: None)"
+msgstr ""
+
+#. module: pos_moresco_direct
+#: model:ir.model.fields,help:pos_moresco_direct.field_pos_config__moresco_stop_bits
+msgid "Serial port stop bits (default: 1)"
+msgstr ""
+
+#. module: pos_moresco_direct
+#: model:ir.model.fields,field_description:pos_moresco_direct.field_pos_config__moresco_simulation_enabled
+#: model_terms:ir.ui.view,arch_db:pos_moresco_direct.view_pos_config_form_moresco
+#: model_terms:ir.ui.view,arch_db:pos_moresco_direct.res_config_settings_view_form_moresco
+msgid "Simulation Mode"
+msgstr ""
+
+#. module: pos_moresco_direct
+#: model:ir.model.fields,field_description:pos_moresco_direct.field_pos_config__moresco_simulation_mode
+#: model_terms:ir.ui.view,arch_db:pos_moresco_direct.view_pos_config_form_moresco
+#: model_terms:ir.ui.view,arch_db:pos_moresco_direct.res_config_settings_view_form_moresco
+msgid "Simulation Type"
+msgstr ""
+
+#. module: pos_moresco_direct
+#. odoo-javascript
+#: code:addons/pos_moresco_direct/static/src/js/moresco_navbar_weight.js:0
+msgid "Sin báscula"
+msgstr ""
+
+#. module: pos_moresco_direct
+#: model:ir.model.fields,field_description:pos_moresco_direct.field_pos_config__moresco_stop_bits
+#: model_terms:ir.ui.view,arch_db:pos_moresco_direct.view_pos_config_form_moresco
+msgid "Stop Bits"
+msgstr ""
+
+#. module: pos_moresco_direct
+#: model_terms:ir.ui.view,arch_db:pos_moresco_direct.view_pos_config_form_moresco
+msgid ""
+"The scale connects directly from the browser using the Web Serial API. Use "
+"Google Chrome or Microsoft Edge and press Ctrl+B in the Point of Sale to "
+"connect the scale."
+msgstr ""
+
+#. module: pos_moresco_direct
+#: model:ir.model.fields,help:pos_moresco_direct.field_pos_config__moresco_auto_read
+msgid "Automatically read weight when selecting a weighable product"
+msgstr ""
+
+#. module: pos_moresco_direct
+#: model:ir.model.fields,help:pos_moresco_direct.field_pos_config__moresco_simulation_enabled
+msgid "Use simulated weight values without a physical scale"
+msgstr ""
+
+#. module: pos_moresco_direct
+#. odoo-javascript
+#: code:addons/pos_moresco_direct/static/src/js/moresco_scale.js:0
+msgid "Web Serial API not supported. Use Chrome or Edge browser."
+msgstr ""
+
+#. module: pos_moresco_direct
+#. odoo-javascript
+#: code:addons/pos_moresco_direct/static/src/js/moresco_scale.js:0
+msgid "Weight applied: "
+msgstr ""
+
+#. module: pos_moresco_direct
+#. odoo-javascript
+#: code:addons/pos_moresco_direct/static/src/xml/pos_screen.xml:0
+msgid "Weigh"
+msgstr ""
+
+#. module: pos_moresco_direct
+#. odoo-javascript
+#: code:addons/pos_moresco_direct/static/src/js/moresco_navbar_weight.js:0
+msgid "báscula en vivo · Ctrl+B"
+msgstr ""
+
+#. module: pos_moresco_direct
+#. odoo-javascript
+#: code:addons/pos_moresco_direct/static/src/js/moresco_navbar_weight.js:0
+msgid "click o Ctrl+B para conectar"
+msgstr ""

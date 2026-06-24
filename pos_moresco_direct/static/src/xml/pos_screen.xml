@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+    <t t-name="pos_moresco_direct.ControlButtons" t-inherit="point_of_sale.ControlButtons" t-inherit-mode="extension">
+        <xpath expr="//t[@t-if='props.showRemainingButtons']/div/OrderlineNoteButton" position="after">
+            <!-- Connect/Disconnect button -->
+            <button
+                t-if="pos.config.moresco_scale_enabled and !pos.config.moresco_simulation_enabled"
+                t-att-class="morescoIsConnected ? 'btn btn-success lh-lg' : 'btn btn-secondary lh-lg'"
+                t-att-title="morescoIsConnected ? 'Scale connected — click to disconnect' : 'Click to connect Moresco scale'"
+                t-on-click="() => this.clickMorescoConnect()"
+            >
+                <i class="fa fa-usb me-1"/>
+                <t t-if="morescoIsConnected">Scale ✓</t>
+                <t t-else="">Connect Scale</t>
+            </button>
+            <!-- Read weight button (only when connected or simulation) -->
+            <button
+                t-if="pos.config.moresco_scale_enabled and (morescoIsConnected || pos.config.moresco_simulation_enabled)"
+                t-att-class="buttonClass"
+                title="Read weight from Moresco scale"
+                t-on-click="() => this.clickMorescoScale()"
+            >
+                <i class="fa fa-balance-scale me-1"/>
+                Weigh
+                <span t-if="pos.config.moresco_simulation_enabled" class="badge text-bg-warning ms-1">SIM</span>
+            </button>
+        </xpath>
+    </t>
+</templates>

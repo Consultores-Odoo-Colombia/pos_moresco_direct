@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_pos_config_form_moresco" model="ir.ui.view">
+        <field name="name">pos.config.form.moresco</field>
+        <field name="model">pos.config</field>
+        <field name="inherit_id" ref="point_of_sale.pos_config_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//setting[@id='other_devices']" position="after">
+                <setting id="moresco_scale_setting" string="Moresco HY-918 (USB-RS232)" help="Read weight directly from the browser via Web Serial API (Chrome/Edge). No IoT Box required.">
+                    <field name="moresco_scale_enabled"/>
+                    <div class="content-group mt16" invisible="not moresco_scale_enabled">
+                        <div class="alert alert-info" role="alert">
+                            The scale connects directly from the browser using the Web Serial API. Use Google Chrome or Microsoft Edge and press Ctrl+B in the Point of Sale to connect the scale.
+                        </div>
+                        <div class="row">
+                            <label for="moresco_auto_read" class="col-lg-4 o_light_label" string="Auto Read"/>
+                            <div class="col-lg-8">
+                                <field name="moresco_auto_read"/>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <label for="moresco_simulation_enabled" class="col-lg-4 o_light_label" string="Simulation Mode"/>
+                            <div class="col-lg-8">
+                                <field name="moresco_simulation_enabled"/>
+                            </div>
+                        </div>
+                        <div class="content-group ms-3" invisible="not moresco_simulation_enabled">
+                            <div class="row">
+                                <label for="moresco_simulation_mode" class="col-lg-4 o_light_label" string="Simulation Type"/>
+                                <div class="col-lg-8">
+                                    <field name="moresco_simulation_mode"/>
+                                </div>
+                            </div>
+                            <div class="row" invisible="moresco_simulation_mode != 'fixed'">
+                                <label for="moresco_simulation_fixed_weight" class="col-lg-4 o_light_label" string="Fixed Weight (kg)"/>
+                                <div class="col-lg-8">
+                                    <field name="moresco_simulation_fixed_weight"/>
+                                </div>
+                            </div>
+                            <div class="row" invisible="moresco_simulation_mode != 'random'">
+                                <label for="moresco_simulation_min_weight" class="col-lg-4 o_light_label" string="Min Weight (kg)"/>
+                                <div class="col-lg-8">
+                                    <field name="moresco_simulation_min_weight"/>
+                                </div>
+                            </div>
+                            <div class="row" invisible="moresco_simulation_mode != 'random'">
+                                <label for="moresco_simulation_max_weight" class="col-lg-4 o_light_label" string="Max Weight (kg)"/>
+                                <div class="col-lg-8">
+                                    <field name="moresco_simulation_max_weight"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <label for="moresco_baud_rate" class="col-lg-4 o_light_label" string="Baud Rate"/>
+                            <div class="col-lg-8">
+                                <field name="moresco_baud_rate"/>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <label for="moresco_data_bits" class="col-lg-4 o_light_label" string="Data Bits"/>
+                            <div class="col-lg-8">
+                                <field name="moresco_data_bits"/>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <label for="moresco_stop_bits" class="col-lg-4 o_light_label" string="Stop Bits"/>
+                            <div class="col-lg-8">
+                                <field name="moresco_stop_bits"/>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <label for="moresco_parity" class="col-lg-4 o_light_label" string="Parity"/>
+                            <div class="col-lg-8">
+                                <field name="moresco_parity"/>
+                            </div>
+                        </div>
+                    </div>
+                </setting>
+            </xpath>
+        </field>
+    </record>
+</odoo>

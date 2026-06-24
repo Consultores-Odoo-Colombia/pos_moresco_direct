@@ -1,0 +1,127 @@
+/* ============================================================
+   Moresco Scale – Navbar Weight Indicator
+   ============================================================ */
+
+/* ── Dot pulse animation ── */
+@keyframes moresco-pulse {
+    0%   { box-shadow: 0 0 0 0 rgba(113, 75, 103, 0.6); }
+    70%  { box-shadow: 0 0 0 6px rgba(113, 75, 103, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(113, 75, 103, 0); }
+}
+
+@keyframes moresco-pulse-warning {
+    0%   { box-shadow: 0 0 0 0 rgba(255, 193, 7, 0.7); }
+    70%  { box-shadow: 0 0 0 6px rgba(255, 193, 7, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(255, 193, 7, 0); }
+}
+
+/* ── Flash when new weight arrives ── */
+@keyframes moresco-reading-flash {
+    0%   { background-color: #714B67; }
+    40%  { background-color: #875A7B; }
+    100% { background-color: #714B67; }
+}
+
+/* ── Container ── */
+.moresco-weight-indicator {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;          /* never compress */
+    gap: 6px;
+    border-radius: 8px;
+    /* vertical padding: center inside navbar (~56px tall) */
+    padding: 5px 12px;
+    margin-right: 10px;      /* gap before OrderTabs */
+    font-family: 'Courier New', Courier, monospace;
+    white-space: nowrap;
+    cursor: pointer;
+    user-select: none;
+    z-index: 10;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+    min-width: 170px;
+}
+
+/* ── Connected state ── */
+.moresco-weight-indicator.moresco-connected {
+    background-color: #714B67;
+    border: 2px solid #5b3c52;
+    color: #fff;
+}
+
+.moresco-weight-indicator.moresco-connected.moresco-reading {
+    animation: moresco-reading-flash 0.35s ease-out;
+}
+
+/* ── Disconnected / idle state ── */
+.moresco-weight-indicator.moresco-disconnected {
+    background-color: transparent;
+    border: 2px dashed #6c757d;
+    color: #6c757d;
+}
+
+.moresco-weight-indicator.moresco-disconnected:hover {
+    border-color: #714B67;
+    color: #714B67;
+    background-color: rgba(113,75,103,0.08);
+}
+
+/* ── Error state ── */
+.moresco-weight-indicator.moresco-error {
+    background-color: #ffc107;
+    border: 2px solid #e0a800;
+    color: #212529;
+    animation: moresco-pulse-warning 1.4s ease infinite;
+}
+
+/* ── Live dot ── */
+.moresco-live-dot {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.moresco-connected .moresco-live-dot {
+    background-color: #e6d7e1;
+    animation: moresco-pulse 1.4s ease infinite;
+}
+
+.moresco-disconnected .moresco-live-dot {
+    background-color: #adb5bd;
+}
+
+.moresco-error .moresco-live-dot {
+    background-color: #856404;
+}
+
+/* ── Icon ── */
+.moresco-weight-indicator .moresco-icon {
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+/* ── Value block ── */
+.moresco-weight-value {
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    line-height: 1;
+}
+
+/* ── Label under value ── */
+.moresco-weight-label {
+    font-size: 9px;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    opacity: 0.80;
+    line-height: 1;
+    margin-top: 1px;
+}
+
+/* ── Value + label stacked ── */
+.moresco-weight-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}

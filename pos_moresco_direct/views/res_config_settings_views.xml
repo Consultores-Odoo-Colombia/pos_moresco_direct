@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="res_config_settings_view_form_moresco" model="ir.ui.view">
+        <field name="name">res.config.settings.view.form.moresco</field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="point_of_sale.res_config_settings_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//setting[@id='pos_other_devices']" position="after">
+                <setting id="pos_moresco_scale_settings" string="Moresco HY-918 (USB-RS232)" help="Read weight directly from the browser via Web Serial API (Chrome/Edge). No IoT Box required.">
+                    <field name="pos_moresco_scale_enabled"/>
+                    <div class="content-group mt16" invisible="not pos_moresco_scale_enabled">
+                        <div class="row">
+                            <label for="pos_moresco_auto_read" class="col-lg-4 o_light_label" string="Auto Read"/>
+                            <field name="pos_moresco_auto_read"/>
+                        </div>
+                        <div class="row mt8">
+                            <label for="pos_moresco_simulation_enabled" class="col-lg-4 o_light_label" string="Simulation Mode"/>
+                            <field name="pos_moresco_simulation_enabled"/>
+                        </div>
+                        <div class="content-group ms-3" invisible="not pos_moresco_simulation_enabled">
+                            <div class="row mt8">
+                                <label for="pos_moresco_simulation_mode" class="col-lg-4 o_light_label" string="Simulation Type"/>
+                                <field name="pos_moresco_simulation_mode"/>
+                            </div>
+                            <div class="row mt8" invisible="pos_moresco_simulation_mode != 'fixed'">
+                                <label for="pos_moresco_simulation_fixed_weight" class="col-lg-4 o_light_label" string="Fixed Weight (kg)"/>
+                                <field name="pos_moresco_simulation_fixed_weight"/>
+                            </div>
+                            <div class="row mt8" invisible="pos_moresco_simulation_mode != 'random'">
+                                <label for="pos_moresco_simulation_min_weight" class="col-lg-4 o_light_label" string="Min Weight (kg)"/>
+                                <field name="pos_moresco_simulation_min_weight"/>
+                            </div>
+                            <div class="row mt8" invisible="pos_moresco_simulation_mode != 'random'">
+                                <label for="pos_moresco_simulation_max_weight" class="col-lg-4 o_light_label" string="Max Weight (kg)"/>
+                                <field name="pos_moresco_simulation_max_weight"/>
+                            </div>
+                        </div>
+                    </div>
+                </setting>
+            </xpath>
+        </field>
+    </record>
+</odoo>

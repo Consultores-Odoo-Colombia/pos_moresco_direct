@@ -1,0 +1,45 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+dist/
+*.egg-info/
+.eggs/
+.installed.cfg
+
+# Entornos virtuales
+venv/
+.venv/
+env/
+.env
+
+# Odoo
+*.pyc
+*.pyo
+.odoorc
+odoo.conf
+*.log
+filestore/
+sessions/
+
+# IDEs / Editores
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.project
+.pydevproject
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
+
+# Cobertura / Tests
+.coverage
+htmlcov/
+.pytest_cache/
+.tox/

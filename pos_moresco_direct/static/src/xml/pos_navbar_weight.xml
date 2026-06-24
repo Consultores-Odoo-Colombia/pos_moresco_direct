@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+    <t t-name="pos_moresco_direct.NavbarWeight" t-inherit="point_of_sale.Navbar" t-inherit-mode="extension">
+        <!--
+            Insert the scale widget as the FIRST element inside pos-topheader,
+            before pos-leftheader (OrderTabs / cajas).
+        -->
+        <xpath expr="//div[contains(@class,'pos-leftheader')]" position="before">
+            <div
+                t-if="showMorescoNavbarWeight"
+                t-att-class="morescoNavbarWeightContainerClass"
+                t-att-title="morescoIndicatorTitle"
+                t-on-click="() => this.clickMorescoNavbarConnect()"
+            >
+                <!-- Live dot -->
+                <span class="moresco-live-dot"/>
+
+                <!-- Scale icon -->
+                <i t-att-class="morescoIsSerialConnected ? 'fa fa-balance-scale moresco-icon' : 'fa fa-plug moresco-icon'"/>
+
+                <!-- Weight value + sublabel -->
+                <span class="moresco-weight-text">
+                    <span class="moresco-weight-value" t-esc="morescoNavbarWeightLabel"/>
+                    <span class="moresco-weight-label" t-esc="morescoIndicatorSubLabel"/>
+                </span>
+            </div>
+        </xpath>
+    </t>
+</templates>

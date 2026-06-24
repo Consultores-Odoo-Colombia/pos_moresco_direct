@@ -1,0 +1,75 @@
+/* Moresco Keyboard Navigation Styles */
+
+/* Highlight product when selected via keyboard */
+.product.moresco-keyboard-selected {
+    outline: 3px solid #007bff !important;
+    outline-offset: 2px;
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.5) !important;
+    background-color: rgba(0, 123, 255, 0.1) !important;
+    position: relative;
+    z-index: 10;
+}
+
+/* Dark mode support */
+.o_dark .product.moresco-keyboard-selected {
+    outline-color: #4dabf7 !important;
+    box-shadow: 0 0 10px rgba(77, 171, 247, 0.5) !important;
+    background-color: rgba(77, 171, 247, 0.15) !important;
+}
+
+/* Highlight payment method when selected via keyboard */
+.payment-screen .paymentmethods .button.paymentmethod.moresco-keyboard-selected {
+    outline: 3px solid #28a745 !important;
+    outline-offset: 2px;
+    box-shadow: 0 0 15px rgba(40, 167, 69, 0.6) !important;
+    background-color: rgba(40, 167, 69, 0.15) !important;
+    transform: scale(1.05);
+    transition: all 0.2s ease;
+    z-index: 10;
+}
+
+/* Dark mode support for payment methods */
+.o_dark .payment-screen .paymentmethods .button.paymentmethod.moresco-keyboard-selected {
+    outline-color: #51cf66 !important;
+    box-shadow: 0 0 15px rgba(81, 207, 102, 0.6) !important;
+    background-color: rgba(81, 207, 102, 0.2) !important;
+}
+
+/* Add keyboard navigation indicator to search bar */
+.pos-search-bar input:focus,
+.search-bar input:focus,
+.product-search-input:focus,
+.searchbox input:focus {
+    border-color: #007bff !important;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25) !important;
+}
+
+/* Keyboard shortcuts help tooltip */
+.moresco-keyboard-help {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 12px;
+    z-index: 9999;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.moresco-keyboard-help.visible {
+    opacity: 1;
+}
+
+.moresco-keyboard-help kbd {
+    background: #555;
+    border: 1px solid #888;
+    border-radius: 3px;
+    padding: 2px 6px;
+    margin: 0 2px;
+    font-family: monospace;
+    font-size: 11px;
+}
